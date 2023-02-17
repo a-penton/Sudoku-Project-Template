@@ -1,5 +1,8 @@
 from sudoku_generator import *
 
+def test_silly():
+  assert 4 == 4
+
 def test_remove_cells():
   board = generate_sudoku(9, 30)
   # Check if 30 cells are removed
