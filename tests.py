@@ -51,7 +51,7 @@ def test_valid_in_row():
   for i in range(9):
     for j in range(1,10):  
       temp = row_unused(board, i, j)
-      temp2 = sudoku.valid_in_row(i, j)
+      temp2 = sudoku.unused_in_row(i, j)
       assert temp == temp2, "Failed: valid_in_row implemented incorrectly"
  
 def test_valid_in_col():
@@ -70,7 +70,7 @@ def test_valid_in_col():
   for i in range(9):
     for j in range(1,10):  
       temp = col_unused(board, i, j)
-      temp2 = sudoku.valid_in_col(i, j)
+      temp2 = sudoku.unused_in_col(i, j)
       assert temp == temp2, 'Failed: valid_in_col implemented incorrectly'
 
 def test_is_valid():
@@ -107,7 +107,7 @@ def test_is_valid():
     for j in range(9): 
       for k in range(1,10):
         temp = check_safe(sudoku, i, j, k)
-        temp2 = sudoku.is_valid(i, j, k)
+        temp2 = sudoku.check_if_safe(i, j, k)
         # Compare the solution with the student's code
         assert temp == temp2, 'Failed: is_valid implemented incorrectly'
 
